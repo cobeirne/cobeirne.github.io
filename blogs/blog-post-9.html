@@ -96,19 +96,22 @@
                                 <div class="col-sm-10">
                                     <div class="blog-post-info">                                  
                                         <img src="../img/blog-1.jpg" class="img-responsive" alt="">
-                                        <h3><span class="colored-text">Bus Hop</span> | Bus departure time estimation.</h3>
+                                        <h3><span class="colored-text">Bus Hop</span> | Estimate actual bus departure times</h3>
                                         <ul class="list-inline xs-post-info visible-xs">
                                             <li><i class="fa fa-user"></i> <a href="#">Chris O'Beirne</a></li>
                                             <li><i class="fa fa-tag"></i> <a href="#">PTV API | Google Directions | Algorithm</a></li>
                                         </ul>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            Many external factors can affect whether a bus arrives or departs on schedule.  One of the key Bus Hop functions is to estimate that actual departure time based on real time bus GPS location data.  This will allow passengers to avoid having to get to their bus stop early and wasting time.
                                         </p>
-                                        <blockquote>
-                                            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-                                        </blockquote>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            In my role as programmer for the Bus Hop project, I attempted to solve this problem by using a custom algorithm.  It begins by passing the coordinates of each bus stop as waypoints to a Google Directions query.  The estimated departure time of each bus stop is then initialised based on the cumulative leg duration time returned by the directions query.  
+                                        </p>
+                                        <p>
+                                            In parallel to this process the GPS location of the bus is updated via the Bus Hop API and its location is checked for proximity to bus stops along the route.  When a bus is in proximity to a stop, its actual departure time is compared against the scheduled departure time to determine whether the bus is early or late.  If the bus is running off schedule, the duration of all early or late legs are summed and used to positively or negatively offset the remaining bus stop departure times.
+                                        </p>
+                                        <p>
+                                            Initial simulation trials suggest that the algorithm is accurate to within approximately +/-3 minutes for some routes.  However, the small dataset of GPS simulation data induces some error by causing the bus to jump along the route at unrealistic speeds.  Beta testing is expected to return better results because the resolution of bus and user movements will improve.
                                         </p>
                                     </div>
                                 </div>

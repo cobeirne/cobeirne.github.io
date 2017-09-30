@@ -95,19 +95,19 @@
                                 <div class="col-sm-10">
                                     <div class="blog-post-info">                                  
                                         <img src="../img/blog-1.jpg" class="img-responsive" alt="">
-                                        <h3><span class="colored-text">Bus Hop</span> | Displaying user geolocation on a Google Map.</h3>
+                                        <h3><span class="colored-text">Bus Hop</span> | Display dynamic user and bus map markers</h3>
                                         <ul class="list-inline xs-post-info visible-xs">
                                             <li><i class="fa fa-user"></i> <a href="#">Chris O'Beirne</a></li>
                                             <li><i class="fa fa-tag"></i> <a href="#">Google Map | Google Geolocation</a></li>
                                         </ul>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            Bus Hop tracks the location of the user and their bus in real time.  Therefore, these locations need to be marked and regularly updated on the Journey map.
                                         </p>
-                                        <blockquote>
-                                            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-                                        </blockquote>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            In my role as programmer for the Bus Hop project, I solved this problem by first initialising an embedded Google map with bus and passenger markers set at their last known positions.  I then initialise background JavaScript tasks that periodically retrieve the latest bus and user geolocation coordinates, and then move the map markers accordingly.
+                                        </p>
+                                        <p>
+                                            The result successfully showed the bus and passenger markers moving along the bus route.  Unfortunately, the animation is jerky under simulated conditions.  However, this is expected to improve in real life scenarios because the resolution of bus and user movements will increase.
                                         </p>
                                     </div>
                                 </div>

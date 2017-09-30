@@ -94,19 +94,19 @@
                                 <div class="col-sm-10">
                                     <div class="blog-post-info">                                  
                                         <img src="../img/blog-1.jpg" class="img-responsive" alt="">
-                                        <h3><span class="colored-text">Bus Hop</span> | Find user's closest bus stop.</h3>
+                                        <h3><span class="colored-text">Bus Hop</span> | Find the user’s closest bus stop</h3>
                                         <ul class="list-inline xs-post-info visible-xs">
                                             <li><i class="fa fa-user"></i> <a href="#">Chris O'Beirne</a></li>
                                             <li><i class="fa fa-tag"></i> <a href="#">Google Distance Matrix</a></li>
                                         </ul>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            A key feature of the Bus Hop application is to recommend the closest bus stop based on the user location and their selected bus route.  To do this the system needs to know the coordinates of each bus stop and a method to measure the distance between each stop and the user.
                                         </p>
-                                        <blockquote>
-                                            Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
-                                        </blockquote>
                                         <p>
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            In my role as programmer for the Bus Hop project, I solved this problem in three parts.  Firstly, the Public Transport Victoria (PTV) API is queried to retrieve all bus stops for a selected route, including bus stop coordinates.  Secondly the user coordinates are determined through device GPS geolocation or reverse geolocation using a user defined address.  And finally, the distance between each bus stop and the user location is measured using a Google Distance Matrix query to find the closest bus stop.
+                                        </p>
+                                        <p>
+                                            This solution proved reliable for nearby routes, however some errors were evident across longer distances.  Using an “as the crow flies” measurement fails to accommodate for large obstacles e.g. lakes and mountains.  Better accuracy could be achieved by using a Google Directions query, however the accuracy of the current method is adequate for this application.
                                         </p>
                                     </div>
                                 </div>
